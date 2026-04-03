@@ -1,5 +1,5 @@
 /* ------------------------------
-   GLOBAL RESET & BASE STYLES
+   RESET
 --------------------------------*/
 * {
   margin: 0;
@@ -7,34 +7,45 @@
   box-sizing: border-box;
 }
 
+/* ------------------------------
+   SOFT TRICOLOUR BACKGROUND
+--------------------------------*/
 body {
   font-family: Arial, sans-serif;
-  text-align: center;
-  line-height: 1.6;
-
-  /* Soft pastel India tricolour */
   background: linear-gradient(
     to bottom,
-    #FFD8A8 0%,      /* light saffron */
-    #FFD8A8 33.33%,
+    #FFE8CC 0%,      /* very light saffron */
+    #FFE8CC 33.33%,
     #FFFFFF 33.33%,  /* white */
     #FFFFFF 66.66%,
-    #C8F7C5 66.66%,  /* light green */
-    #C8F7C5 100%
+    #DFFFE0 66.66%,  /* very light green */
+    #DFFFE0 100%
   );
+  padding: 40px 10px;
+  text-align: center;
+}
 
-  padding: 20px;
+/* ------------------------------
+   WHITE CONTENT CARD
+--------------------------------*/
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 /* ------------------------------
    HEADER
 --------------------------------*/
-header .logo {
+.logo {
   width: 120px;
   margin-bottom: 10px;
 }
 
-header h1 {
+h1 {
   font-size: 2rem;
   margin-bottom: 5px;
 }
@@ -48,26 +59,28 @@ header p {
    SECTION HEADINGS
 --------------------------------*/
 h2 {
-  font-size: 1.5rem;
-  margin: 20px 0 10px;
+  font-size: 1.4rem;
+  margin: 25px 0 10px;
 }
 
 /* ------------------------------
-   PARAGRAPHS & LISTS
+   TEXT & LISTS
 --------------------------------*/
 p {
   font-size: 1rem;
   margin-bottom: 15px;
+  line-height: 1.6;
 }
 
 ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 20px;
 }
 
 li {
   font-size: 1rem;
-  margin: 5px 0;
+  margin: 6px 0;
 }
 
 /* ------------------------------
@@ -76,4 +89,5 @@ li {
 footer p {
   margin-top: 20px;
   font-size: 0.9rem;
+  opacity: 0.8;
 }
