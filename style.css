@@ -8,28 +8,22 @@
 }
 
 /* ------------------------------
-   ELECTRIC / POWER BACKGROUND
+   BACKGROUND WITH POWER IMAGE
 --------------------------------*/
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   line-height: 1.6;
 
-  /* Deep but clean electric gradient */
-  background: linear-gradient(
-    135deg,
-    #0b1f33 0%,
-    #123456 40%,
-    #16527a 100%
-  );
-
-  /* Very subtle grid (lighter than before) */
+  /* Your image + dark overlay for readability */
   background-image:
-    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    linear-gradient(rgba(5, 10, 20, 0.8), rgba(5, 10, 20, 0.9)),
+    url("assets/img/power-bg.jpg"); /* <-- change path if needed */
 
-  background-size: 60px 60px;
-  background-blend-mode: normal;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
   padding: 20px;
   color: #f5f8ff;
@@ -54,7 +48,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* Subtle glow behind company name (reduced) */
+/* Subtle glow behind company name */
 .glow-title {
   font-size: 2rem;
   font-weight: bold;
@@ -72,7 +66,7 @@ body {
   width: 120%;
   height: 140%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
   animation: pulseGlow 5s infinite ease-in-out;
   z-index: -1;
   border-radius: 50%;
@@ -138,7 +132,7 @@ nav {
   align-items: center;
   gap: 40px;
   padding: 15px 0;
-  background: rgba(0,0,0,0.35); /* no blur */
+  background: rgba(0,0,0,0.55); /* no blur, just solid */
   border-radius: 10px;
 }
 
@@ -170,11 +164,11 @@ nav {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #0b1a2a;
+  background: #050a14;
   list-style: none;
   padding: 10px 15px;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
   min-width: 220px;
   z-index: 2000;
 }
@@ -218,7 +212,7 @@ footer p {
   .dropdown-menu {
     position: static;
     box-shadow: none;
-    background: #0b1f33;
+    background: #050a14;
     margin-top: 10px;
   }
 
