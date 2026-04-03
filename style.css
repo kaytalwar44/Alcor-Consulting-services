@@ -1,8 +1,13 @@
 /* ------------------------------
-   DROPDOWN MENU (FIXED HOVER)
+   DROPDOWN MENU (BULLETPROOF FIX)
 --------------------------------*/
 .dropdown {
   position: relative;
+}
+
+.dropdown > a {
+  padding-bottom: 10px; /* increases hover area */
+  display: inline-block;
 }
 
 .dropdown-menu {
@@ -16,10 +21,12 @@
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   min-width: 220px;
-  z-index: 999; /* ensures it stays above other elements */
+  z-index: 999;
 }
 
-.dropdown:hover .dropdown-menu {
+/* KEEP MENU OPEN WHILE MOVING MOUSE */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
   display: block;
 }
 
