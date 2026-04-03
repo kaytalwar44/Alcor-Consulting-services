@@ -8,24 +8,41 @@
 }
 
 /* ------------------------------
-   FULL-WIDTH BACKGROUND
+   FULL-WIDTH PROFESSIONAL BACKGROUND
 --------------------------------*/
 body {
   font-family: Arial, sans-serif;
   text-align: center;
   line-height: 1.6;
 
+  /* Modern engineering gradient */
   background: linear-gradient(
-    to bottom,
-    #FFE8CC 0%,
-    #FFE8CC 33.33%,
-    #FFFFFF 33.33%,
-    #FFFFFF 66.66%,
-    #DFFFE0 66.66%,
-    #DFFFE0 100%
+    135deg,
+    #f5f7fa 0%,
+    #e6eef5 50%,
+    #dce7f0 100%
   );
 
+  /* Subtle technical grid overlay */
+  background-image:
+    linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+  background-blend-mode: overlay;
+
   padding: 20px;
+}
+
+/* ------------------------------
+   INDIA ACCENT LINE
+--------------------------------*/
+.accent-line {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #FF9933, white, #138808);
+  margin-bottom: 20px;
+  border-radius: 2px;
 }
 
 /* ------------------------------
@@ -36,11 +53,47 @@ body {
   margin-bottom: 10px;
 }
 
-h1 {
+/* Animated glow behind company name */
+.glow-title {
   font-size: 2rem;
-  margin-bottom: 10px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding: 5px 15px;
 }
 
+.glow-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 140%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 70%);
+  animation: pulseGlow 4s infinite ease-in-out;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.4; }
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-top: -5px;
+  margin-bottom: 15px;
+}
+
+/* ------------------------------
+   TEXT ELEMENTS
+--------------------------------*/
 h2 {
   font-size: 1.4rem;
   margin: 20px 0 10px;
@@ -145,4 +198,49 @@ footer p {
   margin-top: 20px;
   font-size: 0.9rem;
   opacity: 0.8;
+}
+
+/* ------------------------------
+   MOBILE RESPONSIVE LAYOUT
+--------------------------------*/
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background: rgba(255,255,255,0.95);
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 0 10px;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+  }
 }
