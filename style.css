@@ -1,5 +1,5 @@
 /* ------------------------------
-   RESET
+   GLOBAL RESET
 --------------------------------*/
 * {
   margin: 0;
@@ -8,10 +8,14 @@
 }
 
 /* ------------------------------
-   SOFT TRICOLOUR BACKGROUND
+   FULL-WIDTH BACKGROUND
 --------------------------------*/
 body {
   font-family: Arial, sans-serif;
+  text-align: center;
+  line-height: 1.6;
+
+  /* Soft pastel India tricolour */
   background: linear-gradient(
     to bottom,
     #FFE8CC 0%,      /* very light saffron */
@@ -21,24 +25,12 @@ body {
     #DFFFE0 66.66%,  /* very light green */
     #DFFFE0 100%
   );
-  padding: 40px 10px;
-  text-align: center;
+
+  padding: 20px;
 }
 
 /* ------------------------------
-   WHITE CONTENT CARD
---------------------------------*/
-.container {
-  max-width: 700px;
-  margin: auto;
-  background: white;
-  padding: 30px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-/* ------------------------------
-   HEADER
+   LOGO & HEADINGS
 --------------------------------*/
 .logo {
   width: 120px;
@@ -47,29 +39,17 @@ body {
 
 h1 {
   font-size: 2rem;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-header p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-/* ------------------------------
-   SECTION HEADINGS
---------------------------------*/
 h2 {
   font-size: 1.4rem;
-  margin: 25px 0 10px;
+  margin: 20px 0 10px;
 }
 
-/* ------------------------------
-   TEXT & LISTS
---------------------------------*/
 p {
   font-size: 1rem;
   margin-bottom: 15px;
-  line-height: 1.6;
 }
 
 ul {
@@ -81,6 +61,65 @@ ul {
 li {
   font-size: 1rem;
   margin: 6px 0;
+}
+
+/* ------------------------------
+   NAVIGATION BAR (FULL WIDTH)
+--------------------------------*/
+nav {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* spacing between menu items */
+  padding: 15px 0;
+  background: rgba(255,255,255,0.85);
+  border-radius: 10px;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* ------------------------------
+   DROPDOWN MENU
+--------------------------------*/
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  min-width: 220px;
+}
+
+.dropdown-menu li {
+  margin: 8px 0;
+}
+
+.dropdown-menu a {
+  color: #333;
+  font-weight: normal;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 /* ------------------------------
