@@ -15,7 +15,6 @@ body {
   text-align: center;
   line-height: 1.6;
 
-  /* Soft pastel India tricolour */
   background: linear-gradient(
     to bottom,
     #FFE8CC 0%,
@@ -64,11 +63,13 @@ li {
 }
 
 /* ------------------------------
-   NAVIGATION BAR (FULL WIDTH)
+   NAVIGATION BAR (FINAL FIX)
 --------------------------------*/
 nav {
   width: 100%;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 1000;
 }
 
 .navbar {
@@ -78,8 +79,10 @@ nav {
   align-items: center;
   gap: 40px;
   padding: 15px 0;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
   border-radius: 10px;
+  position: relative;
+  z-index: 1000;
 }
 
 .navbar li {
@@ -94,7 +97,7 @@ nav {
 }
 
 /* ------------------------------
-   DROPDOWN MENU (FINAL FIXED VERSION)
+   DROPDOWN MENU (WORKING VERSION)
 --------------------------------*/
 .dropdown {
   position: relative;
@@ -108,15 +111,15 @@ nav {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%; /* attaches menu directly under Services */
+  top: 100%;
   left: 0;
   background: white;
   list-style: none;
   padding: 10px 15px;
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   min-width: 220px;
-  z-index: 999;
+  z-index: 2000;
 }
 
 /* KEEP MENU OPEN WHILE MOVING MOUSE */
