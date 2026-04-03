@@ -1,12 +1,107 @@
 /* ------------------------------
-   DROPDOWN MENU (BULLETPROOF FIX)
+   GLOBAL RESET
+--------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------------
+   FULL-WIDTH BACKGROUND
+--------------------------------*/
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  line-height: 1.6;
+
+  /* Soft pastel India tricolour */
+  background: linear-gradient(
+    to bottom,
+    #FFE8CC 0%,
+    #FFE8CC 33.33%,
+    #FFFFFF 33.33%,
+    #FFFFFF 66.66%,
+    #DFFFE0 66.66%,
+    #DFFFE0 100%
+  );
+
+  padding: 20px;
+}
+
+/* ------------------------------
+   LOGO & HEADINGS
+--------------------------------*/
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 20px 0 10px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 1rem;
+  margin: 6px 0;
+}
+
+/* ------------------------------
+   NAVIGATION BAR (FULL WIDTH)
+--------------------------------*/
+nav {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 15px 0;
+  background: rgba(255,255,255,0.85);
+  border-radius: 10px;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* ------------------------------
+   DROPDOWN MENU (FINAL FIXED VERSION)
 --------------------------------*/
 .dropdown {
   position: relative;
 }
 
 .dropdown > a {
-  padding-bottom: 10px; /* increases hover area */
+  padding-bottom: 10px;
   display: inline-block;
 }
 
@@ -38,4 +133,13 @@
   color: #333;
   font-weight: normal;
   text-decoration: none;
+}
+
+/* ------------------------------
+   FOOTER
+--------------------------------*/
+footer p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
