@@ -32,8 +32,9 @@ nav a {
     font-weight: 600;
 }
 
-nav a:hover {
-    color: #0077cc;
+nav a:hover,
+nav a.active {
+    color: #0077ff;
 }
 
 .dropdown {
@@ -75,45 +76,52 @@ nav a:hover {
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-/* HEADER */
-header {
+/* NEON LOGO */
+.logo-wrapper {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    position: relative;
 }
 
-header h1 {
-    font-size: 2.4rem;
+.logo-ring {
+    width: 180px;
+    height: 180px;
+    border: 3px solid rgba(0, 140, 255, 0.6);
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    animation: ringGlow 3s infinite alternate;
+}
+
+.logo-text {
+    font-size: 2.8rem;
     font-weight: bold;
+    color: #00aaff;
+    text-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: textPulse 2.5s infinite alternate;
 }
 
-header p {
-    font-size: 1.1rem;
-    margin-top: 5px;
+@keyframes ringGlow {
+    from { box-shadow: 0 0 10px #0099ff; }
+    to { box-shadow: 0 0 25px #00ccff; }
 }
 
-/* INDIA ACCENT LINE */
+@keyframes textPulse {
+    from { text-shadow: 0 0 10px #00aaff; }
+    to { text-shadow: 0 0 25px #33ccff; }
+}
+
+/* ACCENT LINE */
 .accent-line {
     width: 100%;
     height: 4px;
     background: linear-gradient(to right, #ff9933, #ffffff, #138808);
     margin: 20px 0;
     border-radius: 4px;
-}
-
-/* HERO */
-.hero {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.hero h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-/* ABOUT SECTION */
-.about h2 {
-    margin-bottom: 10px;
 }
 
 /* FOOTER */
@@ -131,11 +139,12 @@ footer {
         padding: 20px;
     }
 
-    header h1 {
-        font-size: 1.9rem;
+    .logo-text {
+        font-size: 2.2rem;
     }
 
-    .hero h2 {
-        font-size: 1.5rem;
+    .logo-ring {
+        width: 140px;
+        height: 140px;
     }
 }
