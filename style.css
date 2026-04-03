@@ -1,240 +1,141 @@
-/* ------------------------------
-   GLOBAL RESET
---------------------------------*/
+/* RESET */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ------------------------------
-   BACKGROUND WITH YOUR IMAGE
---------------------------------*/
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  line-height: 1.6;
-
-  /* Your image + dark overlay for readability */
-  background-image:
-    linear-gradient(rgba(5, 10, 20, 0.75), rgba(5, 10, 20, 0.85)),
-    url("assets/img/AdobeStock_234658970.jpg");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  padding: 20px;
-  color: #f5f8ff;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+    line-height: 1.6;
 }
 
-/* ------------------------------
-   INDIA ACCENT LINE
---------------------------------*/
-.accent-line {
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(to right, #FF9933, white, #138808);
-  margin-bottom: 20px;
-  border-radius: 2px;
-}
-
-/* ------------------------------
-   LOGO & HEADINGS
---------------------------------*/
-.logo {
-  width: 120px;
-  margin-bottom: 10px;
-}
-
-/* Subtle glow behind company name */
-.glow-title {
-  font-size: 2rem;
-  font-weight: bold;
-  position: relative;
-  display: inline-block;
-  padding: 5px 15px;
-  color: #ffffff;
-}
-
-.glow-title::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120%;
-  height: 140%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 70%);
-  animation: pulseGlow 5s infinite ease-in-out;
-  z-index: -1;
-  border-radius: 50%;
-}
-
-@keyframes pulseGlow {
-  0% { opacity: 0.2; }
-  50% { opacity: 0.5; }
-  100% { opacity: 0.2; }
-}
-
-/* Tagline */
-.tagline {
-  font-size: 1.1rem;
-  font-weight: 500;
-  opacity: 0.95;
-  margin-top: -5px;
-  margin-bottom: 15px;
-  color: #e0ecff;
-}
-
-/* ------------------------------
-   TEXT ELEMENTS
---------------------------------*/
-h2 {
-  font-size: 1.4rem;
-  margin: 20px 0 10px;
-  color: #f0f5ff;
-}
-
-p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #e3edff;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-li {
-  font-size: 1rem;
-  margin: 6px 0;
-  color: #e3edff;
-}
-
-/* ------------------------------
-   NAVIGATION BAR
---------------------------------*/
+/* NAVIGATION BAR */
 nav {
-  width: 100%;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 1000;
+    background: #ffffff;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
 }
 
-.navbar {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  padding: 15px 0;
-  background: rgba(0,0,0,0.55);
-  border-radius: 10px;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
 }
 
-.navbar li {
-  position: relative;
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
 }
 
-.navbar a {
-  text-decoration: none;
-  font-size: 1rem;
-  color: #f5f8ff;
-  font-weight: bold;
+nav a:hover {
+    color: #0077cc;
 }
 
-/* ------------------------------
-   DROPDOWN MENU
---------------------------------*/
 .dropdown {
-  position: relative;
-}
-
-.dropdown > a {
-  padding-bottom: 10px;
-  display: inline-block;
+    position: relative;
 }
 
 .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #050a14;
-  list-style: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-  min-width: 220px;
-  z-index: 2000;
-}
-
-.dropdown:hover .dropdown-menu,
-.dropdown-menu:hover {
-  display: block;
+    display: none;
+    position: absolute;
+    top: 28px;
+    left: 0;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px 0;
+    list-style: none;
+    width: 220px;
+    z-index: 10;
 }
 
 .dropdown-menu li {
-  margin: 8px 0;
+    padding: 8px 15px;
 }
 
-.dropdown-menu a {
-  color: #e3edff;
-  font-weight: normal;
-  text-decoration: none;
+.dropdown-menu li:hover {
+    background: #f0f0f0;
 }
 
-/* ------------------------------
-   FOOTER
---------------------------------*/
-footer p {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  opacity: 0.9;
-  color: #d0ddf5;
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
-/* ------------------------------
-   MOBILE RESPONSIVE LAYOUT
---------------------------------*/
-@media (max-width: 768px) {
-
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-    padding: 10px;
-  }
-
-  .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    background: #050a14;
-    margin-top: 10px;
-  }
-
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  .tagline {
-    font-size: 1rem;
-  }
-
-  section {
-    padding: 0 10px;
-  }
+/* MAIN CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.4rem;
-  }
+/* HEADER */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
 
-  .navbar a {
+header h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+/* INDIA ACCENT LINE */
+.accent-line {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #ff9933, #ffffff, #138808);
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* ABOUT SECTION */
+.about h2 {
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 30px;
     font-size: 0.9rem;
-  }
+    opacity: 0.8;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
 }
