@@ -1,14 +1,79 @@
-body {
+/* ------------------------------
+   GLOBAL RESET & BASE STYLES
+--------------------------------*/
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  line-height: 1.6;
+
+  /* Soft pastel India tricolour */
   background: linear-gradient(
     to bottom,
-    #FF9933 0%,
-    #FF9933 33.33%,
-    #FFFFFF 33.33%,
+    #FFD8A8 0%,      /* light saffron */
+    #FFD8A8 33.33%,
+    #FFFFFF 33.33%,  /* white */
     #FFFFFF 66.66%,
-    #138808 66.66%,
-    #138808 100%
+    #C8F7C5 66.66%,  /* light green */
+    #C8F7C5 100%
   );
-  font-family: Arial, sans-serif;
+
+  padding: 20px;
+}
+
+/* ------------------------------
+   HEADER
+--------------------------------*/
+header .logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* ------------------------------
+   SECTION HEADINGS
+--------------------------------*/
+h2 {
+  font-size: 1.5rem;
+  margin: 20px 0 10px;
+}
+
+/* ------------------------------
+   PARAGRAPHS & LISTS
+--------------------------------*/
+p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* ------------------------------
+   FOOTER
+--------------------------------*/
+footer p {
+  margin-top: 20px;
+  font-size: 0.9rem;
 }
