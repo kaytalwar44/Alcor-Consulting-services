@@ -1,105 +1,14 @@
 /* ------------------------------
-   GLOBAL RESET
+   DROPDOWN MENU (FIXED HOVER)
 --------------------------------*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ------------------------------
-   FULL-WIDTH BACKGROUND
---------------------------------*/
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  line-height: 1.6;
-
-  /* Soft pastel India tricolour */
-  background: linear-gradient(
-    to bottom,
-    #FFE8CC 0%,      /* very light saffron */
-    #FFE8CC 33.33%,
-    #FFFFFF 33.33%,  /* white */
-    #FFFFFF 66.66%,
-    #DFFFE0 66.66%,  /* very light green */
-    #DFFFE0 100%
-  );
-
-  padding: 20px;
-}
-
-/* ------------------------------
-   LOGO & HEADINGS
---------------------------------*/
-.logo {
-  width: 120px;
-  margin-bottom: 10px;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-h2 {
-  font-size: 1.4rem;
-  margin: 20px 0 10px;
-}
-
-p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-li {
-  font-size: 1rem;
-  margin: 6px 0;
-}
-
-/* ------------------------------
-   NAVIGATION BAR (FULL WIDTH)
---------------------------------*/
-nav {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.navbar {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px; /* spacing between menu items */
-  padding: 15px 0;
-  background: rgba(255,255,255,0.85);
-  border-radius: 10px;
-}
-
-.navbar li {
+.dropdown {
   position: relative;
 }
 
-.navbar a {
-  text-decoration: none;
-  font-size: 1rem;
-  color: #333;
-  font-weight: bold;
-}
-
-/* ------------------------------
-   DROPDOWN MENU
---------------------------------*/
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 100%; /* attaches menu directly under Services */
   left: 0;
   background: white;
   list-style: none;
@@ -107,6 +16,11 @@ nav {
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   min-width: 220px;
+  z-index: 999; /* ensures it stays above other elements */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .dropdown-menu li {
@@ -116,17 +30,5 @@ nav {
 .dropdown-menu a {
   color: #333;
   font-weight: normal;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* ------------------------------
-   FOOTER
---------------------------------*/
-footer p {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  opacity: 0.8;
+  text-decoration: none;
 }
