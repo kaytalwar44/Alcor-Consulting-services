@@ -4,15 +4,39 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    font-family: Arial, sans-serif;
+
+/* PAGE BACKGROUNDS */
+.bg-home,
+.bg-about {
     background-image: url("https://kaytalwar44.github.io/Alcor-Consulting-services/1.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    color: #222;
-    line-height: 1.6;
+}
+
+.bg-services {
+    background-image: url("https://kaytalwar44.github.io/Alcor-Consulting-services/2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.bg-success {
+    background-image: url("https://kaytalwar44.github.io/Alcor-Consulting-services/3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.bg-career {
+    background-image: url("https://kaytalwar44.github.io/Alcor-Consulting-services/4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 /* NAVIGATION BAR */
