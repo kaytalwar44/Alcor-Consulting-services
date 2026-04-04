@@ -4,10 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, sans-serif;
-    background: #f4f6f9;
+    background-image: url("https://kaytalwar44.github.io/Alcor-Consulting-services/1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: #222;
     line-height: 1.6;
 }
